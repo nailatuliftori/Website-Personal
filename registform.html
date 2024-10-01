@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Registrasi</title>
+    <style>
+        table {
+            border-spacing: 2;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: solid 1px black;
+            padding: 10px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            text-align: left;
+        }
+        .form-container {
+            width: 50%;
+            margin: 0 auto;
+            border: 1px solid #050000;
+            padding: 20px;
+            box-shadow: 0px 0px 10px 0px #0000001a;
+        }
+        .form-container h2 {
+            text-align: center;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: inline-block;
+            width: 150px;
+            vertical-align: top;
+        }
+        .form-group input, 
+        .form-group select, 
+        .form-group textarea {
+            width: 60%;
+            padding: 5px;
+        }
+        .form-group textarea {
+            height: 100px;
+        }
+        .form-group input[type="radio"] {
+            width: auto;
+        }
+        .form-group input[type="checkbox"] {
+            width: auto;
+            margin-right: 10px;
+        }
+        .form-group .skills {
+            display: inline-block;
+            margin-right: 10px;
+        }
+        .form-buttons {
+            text-align: center;
+        }
+        .form-buttons input {
+            padding: 5px 15px;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+        <h2>Form Registrasi</h2>
+        <div class="form-container">
+        <fieldset>
+            <legend for="biodata">Biodata</legend>
+            <table>
+                <form action="#">
+                    <div class="form-group">
+                        <label for="nama">Nama Mahasiswa:</label>
+                        <input type="text" id="nama" name="nama" placeholder="Nama Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="nim">No Induk Mahasiswa (NIM):</label>
+                        <input type="text" id="nim" name="nim" placeholder="123456789">
+                    </div>
+                    <div class="form-group">
+                        <label for="alamat">Alamat Mahasiswa:</label>
+                        <textarea id="alamat" name="alamat" placeholder="Alamat Anda"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label for="tgl-lahir">Tanggal Lahir:</label>
+                        <select id="tgl-lahir" name="tgl-lahir">
+                            <option>01</option>
+                            <option>02</option>
+                            <!-- Add other days as needed -->
+                        </select>
+                        <label for="bulan-lahir">Bulan Lahir:</label>
+                        <select id="bulan-lahir" name="bulan-lahir">
+                            <option>Januari</option>
+                            <option>Februari</option>
+                            <!-- Add other months as needed -->
+                        </select>
+                        <label for="tahun-lahir">Tahun Lahir:</label>
+                        <select id="tahun-lahir" name="tahun-lahir">
+                            <option>1990</option>
+                            <option>1991</option>
+                            <option>1992</option>
+                            <option>1993</option>
+                            <!-- Add other years as needed -->
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Jenis Kelamin:</label>
+                        <input type="radio" id="pria" name="gender" value="pria">
+                        <label for="pria">Pria</label>
+                        <input type="radio" id="wanita" name="gender" value="wanita">
+                        <label for="wanita">Wanita</label>
+                    </div>
+                    <div class="form-group">
+                        <label for="foto">Upload Foto:</label>
+                        <input type="file" id="foto" name="foto">
+                    </div>
+                    <div class="form-group">
+                        <label for="website">URL Website:</label>
+                        <input type="url" id="website" name="website" placeholder="URL Website Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="universitas">Perguruan Tinggi:</label>
+                        <input type="text" id="universitas" name="universitas" placeholder="Universitas Anda">
+                    </div>
+        </table>
+</fieldset>
+</div>
+
+    <div class="form-container">
+        <fieldset>
+            <legend for="info akun">Info Akun</legend>
+            <table>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" placeholder="Email Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username" name="username" placeholder="Username Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" name="password" placeholder="Password Anda">
+                    </div>
+                    <div class="form-group">
+                        <label for="confirm-password">Ulangi Password:</label>
+                        <input type="password" id="confirm-password" name="confirm-password" 
+                        placeholder="Ulangi Password Anda">
+                    </div>
+        </table>
+</fieldset>
+    </div>
+
+    <div class="form-container">
+        <fieldset>
+            <legend for="Kemampuan Dasar">Kemampuan Dasar</legend>
+            <table>
+                    <div class="form-group">
+                        <div class="skills">
+                            <input type="checkbox" id="html" name="skills" value="HTML">
+                            <label for="html">HTML</label>
+                            <input type="checkbox" id="css" name="skills" value="CSS">
+                            <label for="css">CSS</label>
+                            <input type="checkbox" id="javascript" name="skills" value="Javascript">
+                            <label for="javascript">Javascript</label>
+                            <input type="checkbox" id="php" name="skills" value="PHP">
+                            <label for="php">PHP</label>
+                            <input type="checkbox" id="mysql" name="skills" value="MySQL">
+                            <label for="mysql">MySQL</label>
+                            <input type="checkbox" id="laravel" name="skills" value="Laravel">
+                            <label for="laravel">Laravel</label>
+                            <input type="checkbox" id="react-native" name="skills" value="React Native">
+                            <label for="react-native">React Native</label>
+                        </div>
+            </table>
+    </fieldset>
+
+
+    <div class="form-buttons">
+        <input type="reset" value="Reset">
+        <input type="submit" value="Simpan">
+        <input type="button" value="Button">
+    </div>        
+
+</body>
+</html>
